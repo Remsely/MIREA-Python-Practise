@@ -50,7 +50,7 @@ def pyshader(func, w, h):
 
 # Ваш код здесь:
 def func(x, y):
-    return ex4_3(x, y)
+    return ex4_1(x, y)
 
 
 label = tk.Label()

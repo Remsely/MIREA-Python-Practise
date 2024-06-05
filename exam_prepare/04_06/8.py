@@ -11,11 +11,10 @@ def main(input_value):
     return result
 
 
-# Тесты
-print(main(29))  # Должно вернуть 736
-print(main(1257))  # Должно вернуть 40128
-print(main(978))  # Должно вернуть 31488
-print(main(1649))  # Должно вернуть 52864
+print(main(29))
+print(main(1257))
+print(main(978))
+print(main(1649))
 
 
 def main2(x):
@@ -33,18 +32,12 @@ print(main2([('N1', 57), ('N2', 27), ('N3', 187), ('N4', 29)]))
 
 
 def main3(x):
-    w1 = (x) & 2 ** 10 - 1
+    w1 = x & 2 ** 10 - 1
     w3 = (x >> 13) & 2 ** 7 - 1
     w4 = (x >> 20) & 2 ** 7 - 1
     w5 = (x >> 27) & 2 ** 3 - 1
     w6 = (x >> 30) & 2 ** 4 - 1
-    list = []
-    list.append(('W1', hex(w1)))
-    list.append(('W3', hex(w3)))
-    list.append(('W4', hex(w4)))
-    list.append(('W5', hex(w5)))
-    list.append(('W6', hex(w6)))
-    return list
+    return [('W1', hex(w1)), ('W3', hex(w3)), ('W4', hex(w4)), ('W5', hex(w5)), ('W6', hex(w6))]
 
 
 print(main3(6608546738))
